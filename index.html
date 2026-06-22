@@ -258,6 +258,32 @@
         @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
         @keyframes viewFadeIn { to { opacity: 1; transform: translateY(0); } }
         .fade-out { opacity: 0 !important; transform: scale(0.9) !important; }
+        /* 針對 S25 等手機窄螢幕進行 RWD 視覺優化 */
+        @media (max-width: 412px) {
+            .workout-list {
+                padding: 10px 12px 30px 12px; /* 縮小外層清單留白 */
+            }
+            .card {
+                padding: 12px; /* 縮小卡片內部留白 */
+            }
+            .controls-grid {
+                gap: 10px; /* 縮小左右兩欄的間距 */
+            }
+            .control-group {
+                padding: 10px 4px; /* 縮小調整控制框的左右內襯 */
+            }
+            .number-control {
+                gap: 6px; /* 縮小減號、數字、加號之間的距離 */
+            }
+            .circle-btn {
+                width: 30px; /* 微調圓圈按鈕大小 */
+                height: 30px;
+            }
+            .value-display {
+                font-size: 18px; /* 微調數字大小 */
+                width: 32px; /* 縮減數字容器寬度 */
+            }
+        }
     </style>
 </head>
 <body>
